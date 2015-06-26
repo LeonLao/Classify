@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@color/activity_graybg"
+        android:baselineAligned="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.69"
+            android:gravity="center_horizontal"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/barcode_normal" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        >
+
+     <ScrollView
+         android:id="@+id/tools_scrlllview"
+         android:layout_width="84dp"
+         android:layout_height="fill_parent"
+         android:fadingEdge="none"
+         android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+             />
+        
+    </ScrollView>
+    
+      <android.support.v4.view.ViewPager
+          android:id="@+id/goods_pager"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+    
+  </LinearLayout>
+
+</LinearLayout>
