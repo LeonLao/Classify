@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ApMap</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bmapsView">AP地图</string>
+    <string name="suggestion">建议</string>
+    <string name="fushi">俯视</string>
+    <string name="settinglist">系统设置</string>
+    <string name="setlayers">地图显示</string>
+    <string name="det_setlayers">普通、卫星以及交通流量显示设置</string>
+    <string name="searchingbus">简易公交查询</string>
+    <string name="det_searchingbus">市内查找公交路线</string>
+    <string name="settingUI">界面设定</string>
+    <string name="det_settingUI">手势功能以及显示隐藏界面控件</string>
+    <string name="citysearch">城市内搜索</string>
+    <string name="det_citysearch">用户指定城市的城市内搜索</string>
+    <string name="poisearch">周边搜索</string>
+    <string name="det_poisearch">以用户为中心，在指定的范围半径内搜索</string>
+    <string name="common">普通图显示</string>
+    <string name="satellite">卫星图显示</string>
+    <string name="traffic">显示交通图</string>
+    <string name="sure">确定</string>
+    <string name="settingUItitle">用户界面控制功能</string>
+    <string name="setzoom">支持缩放手势</string>
+    <string name="setmove">支持平移手势</string>
+	<string name="setdoubleclick">支持双击放大手势</string>
+	<string name="setrotate">支持旋转地图手势</string>
+	<string name="setoverlook">支持俯视手势</string>
+	<string name="setzoomcontrol">显示缩放控件</string>
+	<string name="city">城市名称:</string>
+	<string name="searchkey">搜索目标:</string>
+	<string name="btnlist">以列形式表显示</string>
+	<string name="btnmap">在地图上显示</string>
+	<string name="radii">搜索半径：</string>
+	<string name="search">搜索</string>
+	<string name="direction">ApMap使用说明书</string>
+	<string name="det_direction">有关按钮，手势等说明</string>
+	
+</resources>

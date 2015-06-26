@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="@string/poisearch"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="53dp"
+        android:text="@string/radii" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="51dp"
+        android:text="@string/searchkey" />
+
+    <EditText
+        android:id="@+id/ray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10" 
+        android:text="500"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/ray"
+        android:ems="10" 
+        android:text="中餐">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/key"
+        android:layout_marginTop="32dp"
+        android:text="开始搜索" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ray"
+        android:layout_alignBottom="@+id/ray"
+        android:layout_alignRight="@+id/ray"
+        android:text="（米）"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

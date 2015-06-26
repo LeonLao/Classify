@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settingUItitle"/>
+
+    <CheckBox
+        android:id="@+id/setzoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setzoom" />
+
+    <CheckBox
+        android:id="@+id/setmove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setmove" />
+
+    <CheckBox
+        android:id="@+id/setdoubleclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setdoubleclick" />
+
+    <CheckBox
+        android:id="@+id/setrotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setrotate" />
+
+    <CheckBox
+        android:id="@+id/setoverlook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setoverlook" />
+
+    <CheckBox
+        android:id="@+id/setzoomcontrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/setzoomcontrol" />
+
+    <Button
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sure" />
+    
+</LinearLayout>
