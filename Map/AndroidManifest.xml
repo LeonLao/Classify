@@ -20,6 +20,7 @@
         android:targetSdkVersion="16" />
     
  <!--使用网络功能所需权限  -->
+ <!-- 测试-->
  
 <!--  允许程序访问有关GSM网络信息 (全球移动通信)-->
 	<uses-permission android:name="android.permission.ACCESS_ENTWORK_STATE"/>
