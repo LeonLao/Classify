@@ -3,7 +3,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-    
+    <!-- 
     
     <ScrollView 
         android:id="@+id/tools_scrlllview"
@@ -11,20 +11,23 @@
          android:layout_height="fill_parent"
          android:fadingEdge="none"
          android:scrollbars="none">
-        
+         
         <LinearLayout 
             android:id="@+id/tools"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="vertical"></LinearLayout>
-        
-        
-        
-        
-        
+            android:orientation="vertical"></LinearLayout>        
+             
     </ScrollView>
     
+    -->
+    <ListView
+            android:id="@+id/listView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             >
+        </ListView>
     
     
 
