@@ -3,7 +3,9 @@ package com.example.viewtext;
 
 import java.util.ArrayList;
 
+import android.R.string;
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,17 +23,22 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
+
 
 public class MainActivity extends Activity {
-//	private String toolslist[];
+	private String toolslist[];
 //	private ScrollView scrollView;
-//	private Button toolsButton[];
-//	private ShopAdapter shopAdapter;
+	
+	private ShopAdapter shopAdapter;
 //	private LayoutInflater inflater;
 //	private View views[];
 //	private ViewPager list_pager;
 	private Type type;
 	private ArrayList<Type> list;
+	private static String[] nanbaos = {"钱包","钥匙包","手提包","双肩包","单肩包","腰包","公文包","斜挎包","手包","名片/卡夹"};
+	
+	
  
 	
 
@@ -42,14 +49,9 @@ public class MainActivity extends Activity {
 		
 		ListView showlist = (ListView)findViewById(R.id.listView1);
 		showlist.setAdapter(new MyListAdapter());
+	//	setview();
 		
 		
-		
-//		scrollView = (ScrollView) findViewById(R.id.tools_scrlllview);
-//		shopAdapter = new ShopAdapter(getSupportFragmentManager());
-//		inflater = LayoutInflater.from(this);
-//		showToolsView();
-		//initPager();
 		
 	}
 	
@@ -62,31 +64,41 @@ public class MainActivity extends Activity {
 		@Override
 		public int getCount() {
 			
-			return 0;
+			return showlist.length;
 		}
 
 		@Override
 		public Object getItem(int position) {
 			
-			return null;
+			return showlist[position];
 		}
 
 		@Override
 		public long getItemId(int position) {
 			
-			return 0;
+			return position;
 		}
 
 		@Override
 		public View getView(int index, View convertView, ViewGroup parent) {
 			
+						
 			convertView = View.inflate(MainActivity.this, R.layout.from, null);
 			TextView toptype = (TextView) convertView.findViewById(R.id.toptype);
-			GridView listview = (GridView)convertView.findViewById(R.id.listView);
+			GridView listgridview = (GridView)convertView.findViewById(R.id.listView);
 			//convertView.setTag(listview);
 			
+			toptype.setText(showlist[index].title);
 			
 			
+			
+			
+			//shopAdapter =new ShopAdapter(null);
+			
+			
+			
+			
+			//listgridview.setAdapter(shopAdapter);
 			
 			
 			return convertView;
@@ -94,67 +106,44 @@ public class MainActivity extends Activity {
 		}
 		
 	}
-
-//	private void initPager() {
-//		
-//		list_pager = (ViewPager)findViewById(R.id.goods_pager);
-//		list_pager.setAdapter(shopAdapter);
-//		
-//		
-//		
+	
+	
+	
+//	private void setview(){
+//	nanbao = new Button[10];
+//	
+//	String[] nanbaos = {"钱包","钥匙包","手提包","双肩包","单肩包","腰包","公文包","斜挎包","手包","名片/卡夹"};
+//	
+//	for(int i = 0;i<nanbao.length;i++){
+//		nanbao[i].setText(nanbaos[i]);
 //	}
-
-
-
-
-//	private void showToolsView() {
-//		toolslist = new String[]{"男包","女包","箱包","男鞋","女鞋"};
-//		LinearLayout toolsLayout = (LinearLayout) findViewById(R.id.tools);
-//		
-//		//设置长度
-//		toolsButton = new Button[toolslist.length];
-//		views= new View[toolslist.length];
-//		
-//		
-//		for (int i=0;i<toolslist.length;i++){
-//			//每个子分类的View
-//			View view = inflater.inflate(R.layout.from, null);
-//			//view.setId(i);
-//			toolsLayout.addView(view);
-//			views[i] = view;
-//			
-//			
-//		}
-//		
 //	}
-//
-//
-//
-//
-//	private class ShopAdapter extends FragmentPagerAdapter{
-//
-//		public ShopAdapter(FragmentManager fm) {
-//			super(fm);
-//			
-//		}
-//
-//		@Override
-//		public Fragment getItem(int arg0) {
-//			Fragment fragment =new Fragment_pro_type();
-//			Bundle bundle=new Bundle();
-//			String str=toolslist[arg0];
-//			bundle.putString("typename",str);
-//			fragment.setArguments(bundle);
-//			return fragment;
-//		}
-//
-//		@Override
-//		public int getCount() {
-//			
-//			return 0;
-//		}
-//		
-//	}
+//	
+	
+	
+	private static final ShowList[] showlist ={
+		new ShowList("品牌男包", nanbaos),
+		new ShowList("品牌女包", null),
+		new ShowList("功能箱包", null),
+		new ShowList("男鞋", null),
+		new ShowList("女鞋", null)
+		
+	};
+	
+	
+	private static class ShowList{
+		private final String title;
+		private final String[] names;
+		
+		public ShowList(String title,String[] names){
+			this.title = title;
+			this.names = names;
+		}
+	}
+	
+	
+
+
 
 	
 }

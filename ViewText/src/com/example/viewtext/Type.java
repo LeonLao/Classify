@@ -1,23 +1,18 @@
 package com.example.viewtext;
 
+
 public class Type {
 	
-	private int id;
 	private String typename;
-	private String typeiconurl;
-	public Type(int id,String typename,String typeiconurl){
+	private String btnname;
+	public Type(String typename,String btnname){
 		super();
-		this.id  = id;
-		this.typeiconurl = typeiconurl;
+		
+		this.typename = btnname;
 		this.typename = typename;
 	}
 	
-	public int getId(){
-		return id;
-	}
-	public void setId(int id){
-		this.id =id;
-	}
+	
 	
 	
 	public String getTypename(){
@@ -27,11 +22,11 @@ public class Type {
 		this.typename = typename;
 	}
 	
-	public String getTypeiconurl(){
-		return typeiconurl;
+	public String getBtnname(){
+		return btnname;
 	}
-	public void setTypeiconurl(String typeiconurl){
-		this.typeiconurl = typeiconurl;
+	public void setBtnname(String btnname){
+		this.btnname = btnname;
 	}
 
 }
