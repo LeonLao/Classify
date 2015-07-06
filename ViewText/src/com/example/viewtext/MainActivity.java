@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 		showlist.setAdapter(new MyListAdapter());
 	//	setview();
 		
-		
+		shopAdapter =new ShopAdapter(this);
 		
 	}
 	
@@ -93,12 +93,12 @@ public class MainActivity extends Activity {
 			
 			
 			
-			//shopAdapter =new ShopAdapter(null);
+//			 shopAdapter =new ShopAdapter(this);
 			
 			
 			
 			
-			//listgridview.setAdapter(shopAdapter);
+			listgridview.setAdapter(shopAdapter);
 			
 			
 			return convertView;

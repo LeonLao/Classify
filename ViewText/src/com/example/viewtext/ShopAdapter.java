@@ -21,10 +21,16 @@ public class ShopAdapter extends BaseAdapter{
 	
 	public ShopAdapter(Context context){
 		super();
-		this.context = context;
-	}
-
 	
+		this.context = context;
+		
+	}
+	
+
+	public void setText(ArrayList<Type> list){
+		this.list = list;
+		mInflater = LayoutInflater.from(context);
+	}
 
 	
 
