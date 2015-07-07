@@ -7,15 +7,15 @@
     <string name="user_name">名称:</string>
     <string name="user_level">级别:</string>
     <string name="user_integral">积分:</string>
-    <string name="order">我的订单</string>
-    <string name="address">地址管理</string>
-    <string name="coupon">优惠券</string>
-    <string name="gift">我的礼物</string>
-    <string name="vipcard">绑定VIP卡</string>
-    <string name="collect">我的收藏</string>
-    <string name="password">密码中心</string>
-    <string name="record">促销记录</string>
-    <string name="exit">退出登录</string>
+    <string name="order">我的订单\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="address">地址管理\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="coupon">优惠券\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="gift">我的礼物\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="vipcard">绑定VIP卡\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="collect">我的收藏\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="password">密码中心\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="record">促销记录\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+    <string name="exit">退出登录\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
    
 
 </resources>
