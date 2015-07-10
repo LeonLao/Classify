@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyCollect</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="goodstitle1">快乐老头欧美牛皮男士钱包本打算开房间阿萨斯大卷发发生的会计法</string>
+    <string name="goodsprice1">¥998</string>
+    <string name="goodstitle2">御清堂瓷白肌锁水保湿洁面乳</string>
+    <string name="goodsprice2">¥699</string>
+    <string name="goodstitle3">DERis女士真皮驾驶证</string>
+    <string name="goodsprice3">¥1688</string>
+
+</resources>
