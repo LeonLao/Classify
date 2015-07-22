@@ -2,31 +2,37 @@ package com.example.viewtext;
 
 
 public class Type {
-	
-	private String typename;
-	private String btnname;
-	public Type(String typename,String btnname){
+	//private int id;
+	//private String typename;
+	private String btntext;
+	public Type(String btntext){
 		super();
 		
-		this.typename = btnname;
-		this.typename = typename;
+		//this.id=id;
+		this.btntext = btntext;
+		//this.typename = typename;
 	}
 	
 	
 	
+//	public int getId(){
+//		return id;
+//	}
+//	public void setId(int id){
+//		this.id= id;
+//	}
+//	public String getTypename(){
+//		return typename;
+//	}
+//	public void setTypename(String typename){
+//		this.typename = typename;
+//	}
 	
-	public String getTypename(){
-		return typename;
+	public String getBtntext(){
+		return btntext;
 	}
-	public void setTypename(String typename){
-		this.typename = typename;
-	}
-	
-	public String getBtnname(){
-		return btnname;
-	}
-	public void setBtnname(String btnname){
-		this.btnname = btnname;
+	public void setBtntext(String btntext){
+		this.btntext = btntext;
 	}
 
 }

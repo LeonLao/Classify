@@ -1,6 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
+    
+     <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:columnWidth="90dip"
+        android:horizontalSpacing="3dip"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="3dip" />
+     
+     
+     
+     
+    <!--  
     <TextView 
         android:id="@+id/toptype"
         android:layout_width="wrap_content"
@@ -39,5 +54,37 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:visibility="visible" />
+        
+        -->
 
 </RelativeLayout>
+<!--  
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+     
+    
+        <LinearLayout 
+            android:id="@+id/linearlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+                     
+        </LinearLayout>        
+                 
+
+</ScrollView>
+
+
+-->

@@ -17,9 +17,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends TopFragmentBackActivity {
-	private String toolsList[];
-	private TextView toolsTextViews[];
-	private View views[];
+	private String toolsList[];//nanbaos[]
+	private TextView toolsTextViews[];//btntext[]
+	private View views[];//views[]
 	private LayoutInflater inflater;
 	private ScrollView scrollView;
 	private int scrllViewWidth = 0, scrollViewMiddle = 0;
@@ -27,6 +27,9 @@ public class MainActivity extends TopFragmentBackActivity {
 	private int currentItem=0;
 	private ShopAdapter shopAdapter;
 	
+	private LinearLayout goodsLayout;
+	
+	//private LinearLayout shop_pager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,15 +41,25 @@ public class MainActivity extends TopFragmentBackActivity {
 		inflater = LayoutInflater.from(this);
 		showToolsView();
 		initPager();
+		//showgoods();
 	}
 	
 	
+//	private void showgoods() {
+//		goodsLayout = (LinearLayout)findViewById(R.id.goods_pager);
+//		goodsLayout.addView(shop_pager);
+//	}
+
+
 	/**
      * initPager<br/>
      * 初始化ViewPager控件相关内容
      */
 	private void initPager() {
+		
+		
 		shop_pager=(ViewPager)findViewById(R.id.goods_pager);
+	    shop_pager = new ViewPager(this);
 		shop_pager.setAdapter(shopAdapter);		
 		shop_pager.setOnPageChangeListener(onPageChangeListener);		
 	}
@@ -149,7 +162,9 @@ public class MainActivity extends TopFragmentBackActivity {
 			Fragment fragment =new Fragment_pro_type();
 			Bundle bundle=new Bundle();
 			String str=toolsList[arg0];
+			//int id = arg0;
 			bundle.putString("typename",str);
+			//bundle.putLong("itemID", id);
 			fragment.setArguments(bundle);
 			return fragment;
 		}

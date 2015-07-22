@@ -2,24 +2,40 @@ package com.example.classify;
 
 public class Type {
 	
-	private int id;
+	private long tid;
 	private String typename;
-	private String typeiconurl;
+	private long iid;
+	private String itemtext;
 	
-	public Type(int id,String typename,String typeiconurl){
+	public Type(long tid,String typename,long iid,String itemtext){
 		
 		super();
-		this.id = id;
+		this.tid = tid;
 		this.typename = typename;
-		this.typeiconurl = typeiconurl;
+		this.iid= iid;
+		this.itemtext = itemtext;
 		
 	}
 	
-	public int getId(){
-		return id;
+	
+	@Override
+	public String toString() {
+		
+		return "Be{" +
+                "tid=" + tid +
+                ", typename='" + typename + '\'' +
+                ", iid=" + iid +
+                ", itemtext='" + itemtext + '\'' +
+                '}';
 	}
-	public void setId(int id){
-		this.id = id;	
+
+
+
+	public long getTid(){
+		return tid;
+	}
+	public void setTid(long tid){
+		this.tid = tid;	
 	}
 	
 	
@@ -30,12 +46,18 @@ public class Type {
 		this.typename = typename;
 	}
 	
-	
-	public String getTypeiconurl(){
-		return typeiconurl;		
+	public long getIid(){
+		return iid;
 	}
-	public void setTypeiconurl(String typeiconrul){
-		this.typeiconurl = typeiconrul;
+	public void setIid(long iid){
+		this.iid =iid;
+	}
+	
+	public String getItemtext(){
+		return itemtext;		
+	}
+	public void setItemtext(String itemtext){
+		this.itemtext = itemtext;
 	}
 	
 

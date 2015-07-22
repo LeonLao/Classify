@@ -15,11 +15,12 @@ public class ShopAdapter extends BaseAdapter{
 	private LayoutInflater mInflater;
 	private Context context;
 	private ArrayList<Type> list;
-	private Type type;
+	//private Type type;
+	
 	//private String[] nanbaos = {"钱包","钥匙包","手提包","双肩包","单肩包","腰包","公文包","斜挎包","手包","名片/卡夹"};
 	
 	
-	public ShopAdapter(Context context){
+	public ShopAdapter(Context context ){
 		super();
 	
 		this.context = context;
@@ -29,7 +30,7 @@ public class ShopAdapter extends BaseAdapter{
 
 	public void setText(ArrayList<Type> list){
 		this.list = list;
-		mInflater = LayoutInflater.from(context);
+		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
 	
@@ -52,24 +53,26 @@ public class ShopAdapter extends BaseAdapter{
 	@Override
 	public long getItemId(int position) {
 		
-		return 0;
+		return position;
 	}
 
 	@Override
 	public View getView(int index, View convertView, ViewGroup parent) {
-		final MyView view;
+		 MyView view;
 		if(convertView == null){
-			view = new MyView();
+			
 			convertView = mInflater.inflate(R.layout.item, null);
+			view = new MyView();
 			view.button = (Button)convertView.findViewById(R.id.button1);
+			
 			convertView.setTag(view);
 		}else{
 			view = (MyView) convertView.getTag();
 		}
-		type = list.get(index);
+		Type type = list.get(index);
 		if(type!=null&&list.size()>0){
 						
-				view.button.setText(type.getBtnname());
+				view.button.setText(type.getBtntext());
 			
 		}
 		
