@@ -1,6 +1,9 @@
 package com.example.classify;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,6 +19,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+
+import com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView;
+
 public class MainActivity extends TopFragmentBackActivity {
 	private String toolsList[];//nanbaos[]
 	private TextView toolsTextViews[];//btntext[]
@@ -23,7 +29,13 @@ public class MainActivity extends TopFragmentBackActivity {
 	private LayoutInflater inflater;
 	private ScrollView scrollView;
 	private int scrllViewWidth = 0, scrollViewMiddle = 0;
-	private ViewPager shop_pager;
+	//private ViewPager shop_pager;
+	
+	StickyGridHeadersGridView mGridView;
+	MyAdapter myAdapter;
+	List<Type> list;
+	private Type type;
+	
 	private int currentItem=0;
 	private ShopAdapter shopAdapter;
 	
@@ -39,8 +51,17 @@ public class MainActivity extends TopFragmentBackActivity {
 		scrollView = (ScrollView) findViewById(R.id.tools_scrlllview);
 		shopAdapter = new ShopAdapter(getSupportFragmentManager());
 		inflater = LayoutInflater.from(this);
-		showToolsView();
+		
+		mGridView = (StickyGridHeadersGridView)findViewById(R.id.goods_pager);
+		list = new ArrayList<Type>();
 		initPager();
+		myAdapter = new MyAdapter();
+		mGridView.setAdapter(myAdapter);
+		mGridView.setAreHeadersSticky(true);
+		
+		
+		showToolsView();
+		
 		//showgoods();
 	}
 	
@@ -57,11 +78,20 @@ public class MainActivity extends TopFragmentBackActivity {
      */
 	private void initPager() {
 		
+		for(int i = 1 ;i<20;i++){
+			 type = new Type();
+			 type.setIid(i/10);
+			 type.setTypename(toolsList[arg0]);
+			 type.setIid(i);
+			 type.setItemtext(typename+i);
+			 list.add(type);
+		}
 		
-		shop_pager=(ViewPager)findViewById(R.id.goods_pager);
-	    shop_pager = new ViewPager(this);
-		shop_pager.setAdapter(shopAdapter);		
-		shop_pager.setOnPageChangeListener(onPageChangeListener);		
+		
+//		shop_pager=(ViewPager)findViewById(R.id.goods_pager);
+//	    shop_pager = new ViewPager(this);
+//		shop_pager.setAdapter(shopAdapter);		
+//		shop_pager.setOnPageChangeListener(onPageChangeListener);		
 	}
 
 

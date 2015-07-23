@@ -62,48 +62,23 @@
     </ScrollView>
     
      
-     
-    <!--  
      <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView
          android:id="@+id/goods_pager"
           android:layout_width="match_parent"
-          android:layout_height="match_parent" >
-         
-         
-         
-         
+          android:layout_height="match_parent">
          
      </com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView>
      
-     -->
+     
+     
+   <!--  
       
       <android.support.v4.view.ViewPager
           android:id="@+id/goods_pager"
           android:layout_width="match_parent"
           android:layout_height="match_parent" />
-        <!--  
-      <ScrollView 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
-     <LinearLayout
-         android:id="@+id/linearlayout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
-         
-     </LinearLayout>
-    </ScrollView>
-    -->
-   
-    
-    
-    
-    
-    
-    
-    
+          -->
+             
 	
 
   </LinearLayout>

@@ -7,13 +7,16 @@ public class Type {
 	private long iid;
 	private String itemtext;
 	
-	public Type(long tid,String typename,long iid,String itemtext){
-		
-		super();
-		this.tid = tid;
-		this.typename = typename;
-		this.iid= iid;
-		this.itemtext = itemtext;
+//	public Type(long tid,String typename,long iid,String itemtext){
+//		
+//		super();
+//		this.tid = tid;
+//		this.typename = typename;
+//		this.iid= iid;
+//		this.itemtext = itemtext;
+//		
+//	}
+	public Type(){
 		
 	}
 	

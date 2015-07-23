@@ -68,8 +68,6 @@ public class Pro_type_adapter extends BaseAdapter implements StickyGridHeadersSi
 			view.itemView = (TextView) convertView;
 			convertView.setTag(view);
 			
-			
-
 		}else{
 			view = (MyView) convertView.getTag();
 		}
@@ -112,7 +110,7 @@ public class Pro_type_adapter extends BaseAdapter implements StickyGridHeadersSi
 		
 	}
 	
-	protected class HeaderViewHolder{
+	protected class TitleView{
 		public TextView textView;		
 	}
 	protected class MyView{
@@ -128,16 +126,16 @@ public class Pro_type_adapter extends BaseAdapter implements StickyGridHeadersSi
 
 	@Override
 	public View getHeaderView(int position, View convertView, ViewGroup parent) {
-		HeaderViewHolder holder;
+		TitleView view;
 		if(convertView == null){
 			convertView = mInflater.inflate(mHeadId, parent, false);
-			holder = new HeaderViewHolder();
-			holder.textView  = (TextView) convertView;
-			convertView.setTag(holder);
+			view = new TitleView();
+			view.textView  = (TextView) convertView;
+			convertView.setTag(view);
 		}else{
-			holder = (HeaderViewHolder) convertView.getTag();
+			view = (TitleView) convertView.getTag();
 		}
-		holder.textView.setText(list.get(position).getTypename());
+		view.textView.setText(list.get(position).getTypename());
 		return convertView;
 	}
 	

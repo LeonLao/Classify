@@ -18,17 +18,18 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tonicartos.widget.stickygridheaders.*;
+import com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView;;
+
 
 public class Fragment_pro_type extends Fragment{
 	private ArrayList<Type> list;
 	private ImageView hint_img;
-	private GridView listView;
+	//private GridView listView;
 	private Pro_type_adapter adapter;
 	private Type type;
 	private ProgressBar progressBar;
 	private String typename;
-	private MyGridView myGridView;
+
 	private LinearLayout layout;
 	private Long itemID;
 	private TextView textview ;
@@ -38,12 +39,11 @@ public class Fragment_pro_type extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
-		View view = inflater.inflate(R.layout.fragment_pro_type, null);
+		View view = inflater.inflate(R.layout.fragment_pro_type, container);
 		
 		gridHeadersGridView = (StickyGridHeadersGridView) view.findViewById(R.id.gridview);
-		
-		
-				
+		list = new ArrayList<Type>();
+						
 		
 		//hint_img = (ImageView)view.findViewById(R.id.hint_img);
 		//listView = (GridView)view.findViewById(R.id.listView);
@@ -58,17 +58,17 @@ public class Fragment_pro_type extends Fragment{
 		
 		adapter = new Pro_type_adapter(getActivity(),list, R.layout.list_pro_type_item, R.layout.list_pro_type_item);
 		gridHeadersGridView.setAdapter(adapter);
-		listView.setAdapter(adapter);
+		//listView.setAdapter(adapter);
 		gridHeadersGridView.setAreHeadersSticky(true);
-		listView.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+//		listView.setOnItemClickListener(new OnItemClickListener() {
+//
+//			@Override
+//			public void onItemClick(AdapterView<?> parent, View view,
+//					int position, long id) {
+//				// TODO Auto-generated method stub
+//				
+//			}
+//		});
 		return view;
 	}
 	
@@ -76,7 +76,11 @@ public class Fragment_pro_type extends Fragment{
 	private void GetTypeList() {
 		list = new ArrayList<Type>();
 		for(int i = 1 ;i<20;i++){
-			 type = new Type(i, typename+i, i, typename+i);
+			 type = new Type();
+			 type.setIid(i/10);
+			 type.setTypename(typename);
+			 type.setIid(i);
+			 type.setItemtext(typename+i);
 			 list.add(type);
 		}
 		
