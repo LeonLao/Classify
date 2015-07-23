@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Faxian</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="phone">客服电话：400-005-9889</string>
+ 	<string name="banquan">©2015 版权所有 LBA.CN\n\r粤ICP备14007906\n广东亮包网络科技股份有限公司</string>  
+	<string name="xitongdaili">☆\t代理系统\t\t\t\t\t\t\t\t\t\t\t\t\t\t></string>
+	<string name="xiazai">☆\t尚享汇软件下载 &#160; &#160; &#160; &#160; &#160; &#160;&#160; &#160; &#160; &#160; ></string>
+	<string name="ketang">☆\t新手课堂\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="xiadan">☆\t下单方式\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="peisong">☆\t配送方式\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="shouhou">☆\t售后服务\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="wenti">☆\t常见问题\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="daili">☆\t代理加盟\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+	<string name="dongtai">☆\t企业动态\t\t\t\t\t\t\t\t\t\t\t\t\t\t>  </string>
+
+</resources>
