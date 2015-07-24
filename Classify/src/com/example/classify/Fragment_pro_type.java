@@ -1,4 +1,4 @@
-package com.example.classify;
+/*package com.example.classify;
 
 
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class Fragment_pro_type extends Fragment{
 		//((TextView)view.findViewById(R.id.toptype)).setText(typename);
 		
 		
-		GetTypeList();
+		//GetTypeList();
 		
 		
 		adapter = new Pro_type_adapter(getActivity(),list, R.layout.list_pro_type_item, R.layout.list_pro_type_item);
@@ -78,9 +78,9 @@ public class Fragment_pro_type extends Fragment{
 		for(int i = 1 ;i<20;i++){
 			 type = new Type();
 			 type.setIid(i/10);
-			 type.setTypename(typename);
+			 type.setTitle(typename);
 			 type.setIid(i);
-			 type.setItemtext(typename+i);
+			 type.setItem(typename+i);
 			 list.add(type);
 		}
 		
@@ -101,4 +101,4 @@ public class Fragment_pro_type extends Fragment{
 //	progressBar.setVisibility(View.GONE);
 //}
 	
-}
+}*/

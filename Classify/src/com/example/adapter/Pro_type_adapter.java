@@ -1,4 +1,4 @@
-package com.example.adapter;
+/*package com.example.adapter;
 
 import java.util.ArrayList;
 
@@ -145,3 +145,4 @@ public class Pro_type_adapter extends BaseAdapter implements StickyGridHeadersSi
 	
 
 }
+*/

@@ -3,9 +3,9 @@ package com.example.classify;
 public class Type {
 	
 	private long tid;
-	private String typename;
+	private String title;
 	private long iid;
-	private String itemtext;
+	private String item;
 	
 //	public Type(long tid,String typename,long iid,String itemtext){
 //		
@@ -24,11 +24,11 @@ public class Type {
 	@Override
 	public String toString() {
 		
-		return "Be{" +
+		return "Type{" +
                 "tid=" + tid +
-                ", typename='" + typename + '\'' +
+                ", title='" + title + '\'' +
                 ", iid=" + iid +
-                ", itemtext='" + itemtext + '\'' +
+                ", item='" + item + '\'' +
                 '}';
 	}
 
@@ -42,11 +42,11 @@ public class Type {
 	}
 	
 	
-	public String getTypename(){
-		return typename;
+	public String getTitle(){
+		return title;
 	}
-	public void setTypename(String typename){
-		this.typename = typename;
+	public void setTitle(String title){
+		this.title = title;
 	}
 	
 	public long getIid(){
@@ -56,11 +56,11 @@ public class Type {
 		this.iid =iid;
 	}
 	
-	public String getItemtext(){
-		return itemtext;		
+	public String getItem(){
+		return item;		
 	}
-	public void setItemtext(String itemtext){
-		this.itemtext = itemtext;
+	public void setItem(String item){
+		this.item = item;
 	}
 	
 

@@ -56,7 +56,7 @@ public class MyAdapter extends BaseAdapter implements StickyGridHeadersSimpleAda
 		}else{
 			view =(MyView)convertView.getTag();
 		}
-		view.textview.setTag(list.get(position).getItemtext());
+		view.textview.setText(list.get(position).getItem());
 		return convertView;
 	}
 
@@ -77,7 +77,7 @@ public class MyAdapter extends BaseAdapter implements StickyGridHeadersSimpleAda
 		}else{
 			view = (TitleView)convertView.getTag();
 		}
-		view.titleview.setText(list.get(position).getTypename());
+		view.titleview.setText(list.get(position).getTitle());
 		return convertView;
 	}
 	

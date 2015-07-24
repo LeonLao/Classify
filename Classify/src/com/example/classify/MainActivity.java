@@ -37,7 +37,7 @@ public class MainActivity extends TopFragmentBackActivity {
 	StickyGridHeadersGridView mGridView;
 	MyAdapter myAdapter;
 	List<Type> list;
-	private Type type;
+	//private Type type;
 	
 	private int currentItem=0;
 	//private ShopAdapter shopAdapter;
@@ -56,12 +56,11 @@ public class MainActivity extends TopFragmentBackActivity {
 		inflater = LayoutInflater.from(this);
 		
 		mGridView = (StickyGridHeadersGridView)findViewById(R.id.goods_pager);
-		list = new ArrayList<Type>();
-	
-		
+		list = new ArrayList<Type>();		
 		initPager();
 		myAdapter = new MyAdapter(this, list, R.layout.list_pro_type_item, R.layout.list_pro_type_item);
 		//mGridView.setAdapter((ListAdapter) shopAdapter);
+		mGridView.setAdapter(myAdapter);
 		mGridView.setAreHeadersSticky(true);
 		
 		
@@ -71,10 +70,7 @@ public class MainActivity extends TopFragmentBackActivity {
 	}
 	
 	
-//	private void showgoods() {
-//		goodsLayout = (LinearLayout)findViewById(R.id.goods_pager);
-//		goodsLayout.addView(shop_pager);
-//	}
+
 
 
 	/**
@@ -82,12 +78,12 @@ public class MainActivity extends TopFragmentBackActivity {
      * 初始化ViewPager控件相关内容
      */
 	private void initPager() {
-		for(int i=0;i<20;i++){
-			type = new Type();
-			 type.setIid(i/10);
-			 type.setTypename(typename);
+		for(int i=0;i<20;i++){			
+			 Type type = new Type();
+			 type.setTid(i/10);
+			 type.setTitle(""+i/10);
 			 type.setIid(i);
-			 type.setItemtext(typename+i);
+			 type.setItem(""+i);
 			 list.add(type);
 		}
 		
@@ -144,7 +140,8 @@ public class MainActivity extends TopFragmentBackActivity {
 		
 		@Override
 		public void onClick(View v) {
-		//	shop_pager.setCurrentItem(v.getId());			
+		//	shop_pager.setCurrentItem(v.getId());
+			
 		}
 	};
 
@@ -155,28 +152,28 @@ public class MainActivity extends TopFragmentBackActivity {
 	 * OnPageChangeListener<br/>
 	 * 监听ViewPager选项卡变化事的事件
 	 */
-//	private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
-//		
-//		@Override
-//		public void onPageSelected(int arg0) {
-//			//if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
-//			if(currentItem!=arg0){
-//				changeTextColor(arg0);
-//				changeTextLocation(arg0);
-//			}
-//			currentItem=arg0;
-//		}
-//		
-//		@Override
-//		public void onPageScrolled(int arg0, float arg1, int arg2) {			
-//			
-//		}
-//		
-//		@Override
-//		public void onPageScrollStateChanged(int arg0) {
-//						
-//		}
-//	};
+	private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
+		
+		@Override
+		public void onPageSelected(int arg0) {
+			//if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
+			if(currentItem!=arg0){
+				changeTextColor(arg0);
+				changeTextLocation(arg0);
+			}
+			currentItem=arg0;
+		}
+		
+		@Override
+		public void onPageScrolled(int arg0, float arg1, int arg2) {			
+			
+		}
+		
+		@Override
+		public void onPageScrollStateChanged(int arg0) {
+						
+		}
+	};
 	
 	
 	
