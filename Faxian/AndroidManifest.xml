@@ -7,6 +7,12 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="16" />
+    <!--  允许程序访问有关GSM网络信息 (全球移动通信)-->
+	<uses-permission android:name="android.permission.ACCESS_ENTWORK_STATE"/>
+
+
+<!--  允许程序打开网络套接字 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -15,13 +21,16 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+           
+             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name=".WebPage" android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
 
 </manifest>

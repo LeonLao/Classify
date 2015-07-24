@@ -16,8 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+
 
 
 import com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView;
@@ -37,9 +40,9 @@ public class MainActivity extends TopFragmentBackActivity {
 	private Type type;
 	
 	private int currentItem=0;
-	private ShopAdapter shopAdapter;
+	//private ShopAdapter shopAdapter;
 	
-	private LinearLayout goodsLayout;
+	private String typename;
 	
 	//private LinearLayout shop_pager;
 
@@ -49,14 +52,16 @@ public class MainActivity extends TopFragmentBackActivity {
 		setContentView(R.layout.activity_main);
 		
 		scrollView = (ScrollView) findViewById(R.id.tools_scrlllview);
-		shopAdapter = new ShopAdapter(getSupportFragmentManager());
+		//shopAdapter = new ShopAdapter(getSupportFragmentManager());
 		inflater = LayoutInflater.from(this);
 		
 		mGridView = (StickyGridHeadersGridView)findViewById(R.id.goods_pager);
 		list = new ArrayList<Type>();
+	
+		
 		initPager();
-		myAdapter = new MyAdapter();
-		mGridView.setAdapter(myAdapter);
+		myAdapter = new MyAdapter(this, list, R.layout.list_pro_type_item, R.layout.list_pro_type_item);
+		//mGridView.setAdapter((ListAdapter) shopAdapter);
 		mGridView.setAreHeadersSticky(true);
 		
 		
@@ -77,16 +82,14 @@ public class MainActivity extends TopFragmentBackActivity {
      * 初始化ViewPager控件相关内容
      */
 	private void initPager() {
-		
-		for(int i = 1 ;i<20;i++){
-			 type = new Type();
+		for(int i=0;i<20;i++){
+			type = new Type();
 			 type.setIid(i/10);
-			 type.setTypename(toolsList[arg0]);
+			 type.setTypename(typename);
 			 type.setIid(i);
 			 type.setItemtext(typename+i);
 			 list.add(type);
 		}
-		
 		
 //		shop_pager=(ViewPager)findViewById(R.id.goods_pager);
 //	    shop_pager = new ViewPager(this);
@@ -141,7 +144,7 @@ public class MainActivity extends TopFragmentBackActivity {
 		
 		@Override
 		public void onClick(View v) {
-			shop_pager.setCurrentItem(v.getId());			
+		//	shop_pager.setCurrentItem(v.getId());			
 		}
 	};
 
@@ -152,28 +155,28 @@ public class MainActivity extends TopFragmentBackActivity {
 	 * OnPageChangeListener<br/>
 	 * 监听ViewPager选项卡变化事的事件
 	 */
-	private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
-		
-		@Override
-		public void onPageSelected(int arg0) {
-			if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
-			if(currentItem!=arg0){
-				changeTextColor(arg0);
-				changeTextLocation(arg0);
-			}
-			currentItem=arg0;
-		}
-		
-		@Override
-		public void onPageScrolled(int arg0, float arg1, int arg2) {			
-			
-		}
-		
-		@Override
-		public void onPageScrollStateChanged(int arg0) {
-						
-		}
-	};
+//	private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
+//		
+//		@Override
+//		public void onPageSelected(int arg0) {
+//			//if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
+//			if(currentItem!=arg0){
+//				changeTextColor(arg0);
+//				changeTextLocation(arg0);
+//			}
+//			currentItem=arg0;
+//		}
+//		
+//		@Override
+//		public void onPageScrolled(int arg0, float arg1, int arg2) {			
+//			
+//		}
+//		
+//		@Override
+//		public void onPageScrollStateChanged(int arg0) {
+//						
+//		}
+//	};
 	
 	
 	
@@ -183,27 +186,27 @@ public class MainActivity extends TopFragmentBackActivity {
 	 * @author Administrator
 	 *
 	 */
-		private class ShopAdapter extends FragmentPagerAdapter {
-			public ShopAdapter(FragmentManager fm) {
-				super(fm);
-		}
-		@Override
-		public Fragment getItem(int arg0) {
-			Fragment fragment =new Fragment_pro_type();
-			Bundle bundle=new Bundle();
-			String str=toolsList[arg0];
-			//int id = arg0;
-			bundle.putString("typename",str);
-			//bundle.putLong("itemID", id);
-			fragment.setArguments(bundle);
-			return fragment;
-		}
-		
-		@Override
-		public int getCount() {
-			return toolsList.length;
-		}
-	}
+//		private class ShopAdapter extends FragmentPagerAdapter {
+//			public ShopAdapter(FragmentManager fm) {
+//				super(fm);
+//		}
+//		@Override
+//		public Fragment getItem(int arg0) {
+//			Fragment fragment =new Fragment_pro_type();
+//			Bundle bundle=new Bundle();
+//			String str=toolsList[arg0];
+//			//int id = arg0;
+//			bundle.putString("typename",str);
+//			//bundle.putLong("itemID", id);
+//			fragment.setArguments(bundle);
+//			return fragment;
+//		}
+//		
+//		@Override
+//		public int getCount() {
+//			return toolsList.length;
+//		}
+//	}
 			/**
 			 * 改变栏目位置
 			 * 
