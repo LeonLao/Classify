@@ -4,21 +4,29 @@ package com.example.faxian;
 
 import android.R.string;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
 	private ListView view;
+	private Button btnphone;
+	final String[] mItems ={"拨打客服电话","取消"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,37 @@ public class MainActivity extends Activity {
 			}
 			
 		});
+		
+		
+		btnphone = (Button)findViewById(R.id.button1);
+		btnphone.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+				builder.setTitle("操作");
+				builder.setItems(mItems, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						switch(which){
+						case 0:
+							Intent intent = new Intent();
+							intent.setAction(Intent.ACTION_CALL);
+							intent.setData(Uri.parse("tel:4000059889"));
+							startActivity(intent);
+							break;
+						case 1:
+							dialog.dismiss();
+							break;
+						}
+						
+					}
+				});
+				builder.show();
+			}
+		});
+		
 	}
 	
 	protected void onListItemClick(int index){

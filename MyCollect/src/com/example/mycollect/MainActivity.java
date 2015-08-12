@@ -1,5 +1,6 @@
 package com.example.mycollect;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -212,6 +213,7 @@ public class MainActivity extends Activity {
 			return id;
 		}
 
+		@SuppressLint("ViewHolder")
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			convertView = View.inflate(MainActivity.this, 

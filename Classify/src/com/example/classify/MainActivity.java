@@ -45,6 +45,8 @@ public class MainActivity extends TopFragmentBackActivity {
 	private String typename;
 	
 	//private LinearLayout shop_pager;
+	
+	private int gridID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class MainActivity extends TopFragmentBackActivity {
 		myAdapter = new MyAdapter(this, list, R.layout.list_pro_type_item, R.layout.list_pro_type_item);
 		//mGridView.setAdapter((ListAdapter) shopAdapter);
 		mGridView.setAdapter(myAdapter);
+	//	mGridView.setOnItemClickListener(listener);
 		mGridView.setAreHeadersSticky(true);
 		
 		
@@ -68,7 +71,6 @@ public class MainActivity extends TopFragmentBackActivity {
 		
 		//showgoods();
 	}
-	
 	
 
 
@@ -99,7 +101,8 @@ public class MainActivity extends TopFragmentBackActivity {
 	 * 动态生成显示items中的textview
 	 */
 	private void showToolsView() {
-		toolsList=new String[]{"名牌鞋包","美妆个护","首饰配件","名品服饰","母婴用品","家具生活","食品保健"};
+		toolsList=new String[]{"名牌鞋包","美妆个护","首饰配件","名品服饰","母婴用品","家具生活","食品保健"
+				,"名牌鞋包","美妆个护","首饰配件","名品服饰","母婴用品","家具生活","食品保健"};
 		LinearLayout toolsLayout=(LinearLayout) findViewById(R.id.tools);
 		//设置长度
 		toolsTextViews=new TextView[toolsList.length];
@@ -140,8 +143,10 @@ public class MainActivity extends TopFragmentBackActivity {
 		
 		@Override
 		public void onClick(View v) {
-		//	shop_pager.setCurrentItem(v.getId());
-			
+			//shop_pager.setCurrentItem(v.getId());			
+			gridID = v.getId();
+			changeTextColor(gridID);
+			changeTextLocation(gridID);
 		}
 	};
 
@@ -156,12 +161,13 @@ public class MainActivity extends TopFragmentBackActivity {
 		
 		@Override
 		public void onPageSelected(int arg0) {
-			//if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
-			if(currentItem!=arg0){
-				changeTextColor(arg0);
-				changeTextLocation(arg0);
-			}
-			currentItem=arg0;
+			
+//			if(shop_pager.getCurrentItem()!=arg0)shop_pager.setCurrentItem(arg0);
+//			if(currentItem!=arg0){
+//				changeTextColor(arg0);
+//				changeTextLocation(arg0);
+//			}
+			//currentItem=arg0;
 		}
 		
 		@Override

@@ -27,7 +27,7 @@ public class Type {
         return tid;
     }
 
-    public void setHid(long tid) {
+    public void setTid(long tid) {
         this.tid = tid;
     }
 
