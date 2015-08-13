@@ -124,7 +124,12 @@ public class MainActivity extends Activity implements OnScrollListener{
 			
 			title.setText("法兰都鹏男士商务休闲"+position);
 			title.setTextSize(25);
-			title.setSingleLine(true);
+			//title.setSingleLine(true);
+			//跑马灯效果焦点问题的解决设置
+			title.setSelected(true);
+			
+			price.setTextSize(18);
+			
 			
 			discount.setText("¥9998");
 			
